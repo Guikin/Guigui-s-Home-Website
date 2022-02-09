@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+html{
+    --Font-color--:white;
+    color: var(--Font-color--);
+    background-image: url(./Media/world\ background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+@supports(scrollbar-color :black purple){
+    *{
+        scrollbar-color: purple black;
+ }
+}
+
+main img{
+    width: 100%;
+}
