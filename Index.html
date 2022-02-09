@@ -7,12 +7,18 @@
     <title>GuiGui's Home</title>
     <link rel="shortcut icon" href="./Media/Guigui logo png.png">
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Karla:wght@700&display=swap" rel="stylesheet"> 
+
+
 </head>
 <body>
     <nav>
         <img src="./Media/Guigui logo png.png" alt="GuiGui Logo">
-        <div class="Nav-links">
+        <div class="nav-links">
             <ul>
                 <a href="#home"><li>Home</li></a>
                 <a href="#about"><li>about</li></a>
@@ -20,8 +26,27 @@
                 <a href="#discord"><li>discord</li></a>
             </ul>
         </div>
-    </nav>
 
+      
+        
+        <div class="mobile-nav" id="button-nav">
+                <span class="nav-button 1"></span>
+                <span class="nav-button 2"></span>
+                <span class="nav-button 3"></span>
+            </div>
+        
+    </nav> 
+    
+    <div class="nav-bg"></div>
+    <div class="nav-links-mobile">
+            <ul>
+                <a href="#home"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#features"><li>Features</li></a>
+                <a href="#discord"><li>Discord</li></a>
+            </ul>
+        </div>
+    
     <main>
         <div class="title" id="home">
         <img src="./Media/GuiGui's Home(1).png" alt="GuiGui's home title">
@@ -32,19 +57,31 @@
             <video src="./Media/World Vid.mp4" controls></video>
             <p>Originally created from the older version of the VRchat home world to showcase avatars, the stagnant rise of visitors led GuiGui's Home to expand to further implementation of VRC prefabs and assets which resulted in a relaxing and enjoyable VrSpace where players can socialise and source their inspiration. Published on 02/03/2020 the world has seen major updates over the course of 2 years and is now at version 3.6 and converted to Udon</p>
         </div>
+
         <div class="World-stats">
+            <div class="visits">
             <img src="./Media/toppng.com-eye-icon-1507x901.png" alt="Eye icon">
-            <img src="./Media/Pc quest icon.png" alt="Pc and Quest Icon">
-            <img src="./Media/star icon.png" alt="Star icon">
             <h3>35000+ Visits</h3>
+        </div>
+        <div class="compatible">
+            <img src="./Media/Pc quest icon.png" alt="Pc and Quest Icon">
             <h3>Pc & Quest compatible</h3>
+        </div>
+        <div class="favorites">
+            <img src="./Media/star icon.png" alt="Star icon">
             <h3>25000+ Favorites</h3>
+        </div>
+            
+            
+            
         </div>
     </div>
     </main>
 
     <section class="features">
         <div class="feature-container-1">
+            <img class="mobile-gif" src="./Media/ezgif.com-gif-maker(10).gif" alt="Animated pictuire of second floor">
+        
             <ul>
                 <li>★ Architech Pro Tv Pc/Vr and Quest compatible
                 </li>
@@ -60,32 +97,32 @@
                 </li>
                 <li>★ Ui selector for Bedroom miror</li>
             </ul>
-            <img src="./Media/ezgif.com-gif-maker(10).gif" alt="Animated pictuire of second floor">
+            <img class="pc-gif" src="./Media/ezgif.com-gif-maker(10).gif" alt="Animated pictuire of second floor">
+        </div>
         </div>
         <div class="feature-container-2">
             <img src="./Media/ezgif.com-gif-maker(9).gif" alt="">
             <ul>
             <li>★ BFW Dynamic cloud
             </li>
-            <li>★Udon VRCBCE Billiards
+            <li>★ Udon VRCBCE Billiards
             </li>
-            <li>★Audio link compatibility
+            <li>★ Audio link compatibility
             </li>
-            <li>★Finger interactable button for Mirrors
+            <li>★ Finger interactable button for Mirrors
             </li>
-            <li>★Interactable plushie with no gravity
+            <li>★ Interactable plushie with no gravity
             </li>
-            <li>★Pens for mutes
+            <li>★ Pens for mutes
             </li>
-            <li>★Udon Keyboard for mutes</li>
+            <li>★ Udon Keyboard for mutes</li>
         </ul>
-        
         </div>
     </section>
 
-    <section>
-        <h3>Gallery</h3>
-        <div class="gallery">
+    <section class="gallery">
+            <h3>Gallery</h3>
+            <div class="gallery-images">
             <img src="./Media/Pictures/VRChat_1920x1080_2021-11-13_22-24-41.954.png" alt="">
             <img src="./Media/Pictures/VRChat_1920x1080_2021-11-13_22-24-41.954.png" alt="">
             <img src="./Media/Pictures/VRChat_1920x1080_2021-11-13_22-24-41.954.png" alt="">
@@ -99,11 +136,11 @@
     </section>
     
     <section class="discord" id="discord">
-        <img src="./Media/favpng_world-globe-icon-design.png" alt="">
-        <h3>World link</h3>
-        <img src="./Media/kisspng-computer-icons-symbol-friendship-5b3ce20c366095.5942996315307166842227.png" alt="">
-        <h3>Add me on VrChat</h3>
-        <a href="https://vrchat.com/home/launch?worldId=wrld_4b683455-d740-4182-b96c-1c8366e6cade"><img src="./Media/GuiGui's home 2.jpg" alt="GuiGui Home link"></a>
+        <img class="world-icon"src="./Media/favpng_world-globe-icon-design.png" alt="">
+        <h3 class="world-link">World link</h3><a class="world-image"href="https://vrchat.com/home/launch?worldId=wrld_4b683455-d740-4182-b96c-1c8366e6cade"><img src="./Media/GuiGui's home 2.jpg" target="_" alt="GuiGui Home link"></a>
+        <img class="addme-icon"src="./Media/kisspng-computer-icons-symbol-friendship-5b3ce20c366095.5942996315307166842227.png" alt="">
+        <h3 class="addme-link">Add me on VrChat</h3>
+        <a class="addme-image" href="https://vrchat.com/home/user/usr_c5bbaee9-1817-4b73-b1df-91c970b33116" target="_"><img src="./Media/vRc model.png" alt="Avatar Model of GuiGui"></a>
 
         <div class="discord-Gui">
             <img src="./Media/Gui Gui logo.png" alt="">
@@ -119,5 +156,7 @@
             <a href="https://discord.gg/Ph3aW2CGKd"><button>Join</button></a>
         </div>
     </section>
+    
+    <script src="/GuiGui's Home Website/index.js"></script>
 </body>
 </html>
