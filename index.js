@@ -20,3 +20,28 @@ const navLinks = document.querySelector(".nav-links-mobile");
 };
 
 navButton.onclick=openMenu;
+
+
+const navBar=document.querySelector("nav");
+
+const title=document.querySelector(".title")
+
+
+const sectionOneOptions = {
+    rootMargin: "-200px 0px 0px 0px"
+};
+
+
+const sectionOneObserver = new IntersectionObserver (function(entries,sectionOneObserver){
+    entries.forEach(entry =>{
+        if(!entry.isIntersecting){
+            navBar.classList.add("scrolled")
+            navBar.style.animation="fade-in 250ms ease-in";
+        }else {
+            navBar.classList.remove("scrolled")
+            navBar.style.animation="fade-out 250ms ease-in";
+        }
+    });
+},sectionOneOptions);
+
+sectionOneObserver.observe(title);

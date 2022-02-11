@@ -47,22 +47,37 @@ nav{
     top:0;
     width: 100%;
     z-index: 1;
-    background:inherit;
-    /* background-image: var(--linear-gradient-purple--); */
+    background-image:inherit;
+    transition: background-image 1s;
 }
 
 nav img{
-    width: 50%;
+    width: 40%;
+    filter: var(--drop-shadow--);
 }
 
+
+
 .nav-links ul{
-    display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     display:none;
+    column-gap: 10%;
+    font-size: 1.6vw;
+    padding: .5vw 9vw;
+    background-image: var(--transparent-gradient-glass);
+    border: var(--border--);
+    border-radius: var(--border-radius--);
+    backdrop-filter: var(--backdrop-filter--);
+    box-shadow: var(--box-shadow--);
 }
 
-.nav-links ul a , .nav-links-mobile ul a {
+.scrolled{
+    background-image:var(--linear-gradient-purple--);
+}
+
+
+.nav-links ul a ,.nav-links-mobile ul a {
     text-decoration: none;
     list-style: none;
     color: var(--Font-color--);
@@ -210,7 +225,7 @@ nav img{
 .World-stats h3{
     font-size: 5vw;
     padding: 15px 0px;
-    filter:var(--text-box-shadow)
+    filter:var(--text-box-shadow--)
 }
 
 .pc-gif{
@@ -278,7 +293,7 @@ nav img{
     border: var(--border--);
     box-shadow: var(--box-shadow--);
     overflow: scroll;
-    height:66vh
+    height:66vh;
 
 }
 .gallery-images img{
@@ -287,13 +302,14 @@ nav img{
 }
 
 
-.discord{
+.links.container{
     display: grid;
     grid-template-rows: repeat(7,.2fr);
     grid-template-columns:40% 60%;
     width: 80%;
     margin: auto;
     align-items: center;
+    row-gap: 2%;
 }
 
 
@@ -367,12 +383,54 @@ nav img{
     justify-content: center;
     padding-top: 40%;
 }
+
 .discord-Gui img{
     border-radius: 50%;
-    width: 70%;
+    width: 60%;
+    backdrop-filter: var(--backdrop-filter--);
+    filter: var(--text-box-shadow--);
 }
 
-.discord-invite{
+.discord-Gui p{
+    font-size: 6vw;
+    margin-top: 30px;
+    padding: 20px;
+    background-image: var(--transparent-gradient-glass);
+    backdrop-filter: var(--backdrop-filter--);
+    border: var(--border--);
+    border-radius: var(--border-radius--);
+    box-shadow: var(--box-shadow--);
+    filter: var(--text-box-shadow--);
+}
+
+
+
+.JoinDc {
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color--);
+    font-size: 7vw;
+    padding: 2px;
+    background-image: var(--transparent-gradient-glass);
+    backdrop-filter: var(--backdrop-filter--);
+    filter: var(--text-box-shadow--);
+    border: var(--border--);
+    border-radius: var(--border-radius--);
+    transition: transform 500ms ease-in;
+    box-shadow: var(--box-shadow--);
+}
+
+.JoinDc:hover{
+    background-image: var(--linear-gradient-purple--);
+    transform: scale(1.05);
+}
+
+.copyright{
+    text-align: center;
+    margin: 20%
+}
+.discord-invite ,.digits{
     display: none;
 }
 
@@ -384,6 +442,122 @@ nav img{
 
 
 
+@media only screen and (min-width:800px){
+    .mobile-nav, .mobile-gif{
+        display: none;
+    }  
 
-@media only screen and (min-width:500px){
+    .nav-links ul, .pc-gif{
+        display: grid;
+    }
+
+    .scrolled{
+        background-color:rgba(0,0,0,0.9);
+        background-image: none;
+        box-shadow: 0 0 3em rgba(34, 34, 34, 0.9);
+    }
+
+    .nav-links li{
+        padding: .6vw;
+        background:inherit;
+        transition: background 500ms ease-in;
+        filter: var(--text-box-shadow--);
+    }
+    .nav-links li:hover{
+        background: var(--linear-gradient-purple--);
+        border-radius: var(--border-radius--);
+        backdrop-filter: var(--drop-shadow--);
+    }
+    
+    nav img{
+        width: 20%;
+    }
+
+    .title img{
+        width:80%;
+        padding-top:8rem;
+    }
+    .about{
+        width:80%;
+        padding:0px
+    }
+
+    .about-content{
+        display: grid;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: none;
+    }
+    #about p{
+        font-size: 1.35vw;
+    }
+
+
+    .World-stats{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: none;
+        margin: auto;
+    }
+
+    .World-stats img{
+        width: 30%;
+    }
+    .World-stats h3{
+        font-size: 3vw;
+        width:60%;
+        margin: auto;
+    }
+
+    .feature-container-1, .feature-container-2{
+        grid-template-columns: 55% 45%;
+        width: 70%;
+        padding: 2% 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .features{
+        row-gap: 5%;
+    }
+    .feature-container-1 img,.feature-container-2 img{
+        width: 80%;
+    }
+
+    .feature-container-1 ul,.feature-container-2 ul{
+        padding-top: 0;
+        justify-content: start;
+    }
+
+    .feature-container-1 li,.feature-container-2 li{
+        font-size: 1.25vw;
+        padding:5px;
+    }
+
+
+    .gallery h3{
+        font-size: 4.5vw;
+        padding-bottom: 2%;
+    }
+    .gallery-images{
+        grid-template-columns: repeat(2,1fr);
+        width: 90%;
+        height: 40vh;
+        row-gap: 40%;
+        grid-template-rows: none;
+        overflow-x: hidden;
+    }
+
+    .gallery-images img{
+        width: 85%;
+    }
+
+    .discord img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .discord {
+    }
+     .discord .world-icon, .discord .addme-icon{
+        width:10%;
+    }
 }
