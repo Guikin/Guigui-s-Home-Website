@@ -435,7 +435,6 @@ nav img{
 }
 
 
-
 .JoinDc {
     width: 60%;
     text-align: center;
@@ -470,12 +469,9 @@ nav img{
 
 
 
+/* Big Screen Media */
 
-
-
-
-
-@media only screen and (min-width:800px){
+@media only screen and (min-width:950px){
     .mobile-nav, .mobile-gif, .JoinDc{
         display: none;
     }  

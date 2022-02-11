@@ -4,11 +4,14 @@ const navButton = document.querySelector(".mobile-nav")
 
 const navLinks = document.querySelector(".nav-links-mobile");
 
- function openMenu(){
-     function fadeOut(){
+ 
+function fadeOut(){
         navLinks.style.opacity="0";
         navLinks.style.display="none";
      }
+
+function openMenu(){
+     
      if(navLinks.style.opacity==="0"){
          navLinks.style.opacity="1";
          navLinks.style.display="block";
@@ -20,6 +23,12 @@ const navLinks = document.querySelector(".nav-links-mobile");
         navLinks.classList.remove("fade-in");
      }
 };
+
+function closeMenu(){
+    setTimeout(fadeOut,500);
+        navLinks.classList.add("fade-out");
+        navLinks.classList.remove("fade-in");
+}
 
 navButton.onclick=openMenu;
 
@@ -79,16 +88,66 @@ const aboutButton = document.querySelector(".about-btn")
 const featuresButton = document.querySelector(".features-btn")
 const discordButton = document.querySelector(".discord-btn")
 
+const homeMobile =document.querySelector(".home-mobile")
+const aboutMobile =document.querySelector(".about-mobile")
+const featuresMobile =document.querySelector(".features-mobile")
+const discordMobile =document.querySelector(".discord-mobile")
+
+const homeView = document.querySelector("#home")
 const featuresView = document.querySelector("#features")
+const aboutView = document.querySelector("#about")
+const discordView = document.querySelector("#discord")
 
 
-const navbtn= document.querySelectorAll(".nav-links a")
+function homeScroll(){
+    homeButton.removeAttribute("href")
+    homeMobile.removeAttribute("href")
+    homeView.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    })
+    closeMenu()
+}
 
-function smoothScroll(){
+function featuresScroll(){
+    featuresButton.removeAttribute("href")
+    featuresMobile.removeAttribute("href")
     featuresView.scrollIntoView({
         behavior:"smooth",
         block:"start"
     })
+    closeMenu()
+
 }
-console.log(featuresButton,featuresView)
-featuresButton.addEventListener("click",smoothScroll);
+
+function aboutScroll(){
+    aboutButton.removeAttribute("href")
+    aboutMobile.removeAttribute("href")
+    aboutView.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    })
+    closeMenu()
+}
+function discordScroll(){
+    discordButton.removeAttribute("href")
+    discordMobile.removeAttribute("href")
+    discordView.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    })
+    closeMenu()
+}
+
+homeButton.onclick=homeScroll;
+aboutButton.onclick=aboutScroll;
+featuresButton.addEventListener("click",featuresScroll);
+discordButton.addEventListener("click",discordScroll);
+
+homeMobile.onclick= homeScroll;
+aboutMobile.onclick= aboutScroll;
+featuresMobile.onclick= featuresScroll;
+discordMobile.onclick= discordScroll;
+
+
+
