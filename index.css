@@ -278,7 +278,7 @@ nav img{
     filter: var(--text-box-shadow--);
 }
 
-
+/* pop-up for Gallery WIP */
 .pop-up{
     opacity:0;
     position: fixed;
@@ -289,7 +289,7 @@ nav img{
     width: 80%;
 }
 
-
+/* Gallery Section */
 .gallery{
     padding-bottom:30% ;
 }
@@ -322,7 +322,7 @@ nav img{
     border-radius:15px;
 }
 
-
+/* Discord and world links */
 .links-container{
     display: grid;
     grid-template-rows:50% 50%;

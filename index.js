@@ -82,7 +82,7 @@ faders.forEach(fader=>{
     sectionTwoObserver.observe(fader);
 });
 
-
+// Mobile and Desktop Functionality
 const homeButton = document.querySelector(".home-btn")
 const aboutButton = document.querySelector(".about-btn")
 const featuresButton = document.querySelector(".features-btn")
