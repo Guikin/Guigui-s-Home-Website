@@ -10,7 +10,7 @@ html{
     --linear-gradient-purple--:-webkit-linear-gradient(-40deg,rgb(204, 7, 204), blue);
     --transparent-gradient:linear-gradient(#391085, transparent);
     --transparent-gradient-glass:linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
-    background-image: url(./Media/world\ background.jpg);
+    background:url("./Media/world\ background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -198,7 +198,7 @@ nav img{
     padding: 40px 10px;
 }
 
-#about video{
+#about iframe{
     width:90%;
     margin: auto;
 }
@@ -300,26 +300,104 @@ nav img{
     padding-bottom: 10%;
     filter: var(--text-box-shadow--);
 }
-.gallery-images{
-    display: grid;
-    grid-template-rows:repeat(9,1fr);
-    place-items: center;
-    row-gap: 8%;
+.gallery-images{ 
+    
     background-image: var(--transparent-gradient-glass);
-    padding: 8% 0;
-    width: 70%;
+    padding: 3% ;
+    width: 95%;
     margin: auto;
     border-radius: var(--border-radius--);
     backdrop-filter: var(--backdrop-filter--);
     border: var(--border--);
     box-shadow: var(--box-shadow--);
-    overflow: scroll;
-    height:66vh;
-
 }
-.gallery-images img{
-    width: 85%;
-    border-radius:15px;
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Gallery images */
+.mySlides img{
+    border-radius: var(--border-radius--);
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(89, 0, 255, 0.8);
+ }
+  
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(0, 47, 255);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #00eaff;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 /* Discord and world links */
@@ -346,7 +424,6 @@ nav img{
     grid-template-columns: 20% 80%;
     row-gap: 10px;
 }
-
 
 .world-icon{
     grid-row: 1 / 1;
@@ -375,7 +452,7 @@ nav img{
     transform: scale(1.1);
     transition: transform 250ms ease-in;
 }
-
+/* add me Button */
 .addme-icon{ 
     justify-self: end;
     align-self: center;
@@ -407,7 +484,7 @@ nav img{
     transform: scale(1.05);
     transition: transform 250ms ease-in;
 }
-
+/* My discord buttons */
 .discord-Gui{
     display: grid;
     place-items: center;
@@ -433,8 +510,6 @@ nav img{
     box-shadow: var(--box-shadow--);
     filter: var(--text-box-shadow--);
 }
-
-
 .JoinDc {
     width: 60%;
     text-align: center;
@@ -471,7 +546,9 @@ nav img{
 
 /* Big Screen Media */
 
-@media only screen and (min-width:950px){
+@media screen and (min-width:1000px){
+
+    /* nav Section */
     .mobile-nav, .mobile-gif, .JoinDc{
         display: none;
     }  
@@ -487,27 +564,32 @@ nav img{
     }
 
     .nav-links li{
-        padding: .6vw;
+        padding: .35vw;
         background:inherit;
         transition: background 500ms ease-in;
         filter: var(--text-box-shadow--);
+        font-size: 1vw;
+        
     }
     .nav-links li:hover{
         background: var(--linear-gradient-purple--);
         border-radius: var(--border-radius--);
         backdrop-filter: var(--drop-shadow--);
+        cursor: pointer;
     }
     
     nav img{
-        width: 20%;
+        width: 10%;
     }
 
     .title img{
         width:80%;
         padding-top:8rem;
     }
+
+    /* About Sections */
     .about{
-        width:80%;
+        width:10%;
         padding:0px
     }
 
@@ -515,30 +597,33 @@ nav img{
         display: grid;
         grid-template-columns: 45% 55%;
         grid-template-rows: none;
+        width: 70%;
     }
     #about p{
-        font-size: 1.35vw;
+        font-size: 1vw;
     }
 
-
+    /* world stats */
     .World-stats{
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: none;
         margin: auto;
+        width: 80%;
     }
 
     .World-stats img{
-        width: 30%;
+        width: 25%;
     }
     .World-stats h3{
-        font-size: 3vw;
-        width:60%;
+        font-size: 1.5vw;
+        width:30%;
         margin: auto;
     }
 
+    /* Features Section */
     .feature-container-1, .feature-container-2{
         grid-template-columns: 55% 45%;
-        width: 70%;
+        width: 50%;
         padding: 2% 0px;
         align-items: center;
         justify-content: center;
@@ -558,32 +643,25 @@ nav img{
     }
 
     .feature-container-1 li,.feature-container-2 li{
-        font-size: 1.25vw;
+        font-size: 1.0vw;
         padding:5px;
     }
 
 
-
+    /* Gallery Section */
     .gallery{
         padding-bottom: 20%;
     }
     .gallery h3{
-        font-size: 4.5vw;
-        padding-bottom: 2%;
-    }
-    .gallery-images{
-        grid-template-columns: repeat(2,1fr);
-        width: 90%;
-        height: 40vh;
-        row-gap: 40%;
-        grid-template-rows: none;
-        overflow-x: hidden;
+        font-size: 2.5vw;
+        padding-bottom: 5%;
+
+    } .gallery-images{
+        
+        width: 60%; 
     }
 
-    .gallery-images img{
-        width: 85%;
-    }
-
+    /* Discord and links Section */
     .discord img{
         width: 53%;
         margin-left: 15%;
@@ -595,7 +673,6 @@ nav img{
         align-items: start;
         padding-top: 8%;
     }
-
 
     .discord .world-icon, .discord .addme-icon{
         width:20%;
@@ -704,3 +781,5 @@ nav img{
         margin: 2%;
     }
 }
+
+
